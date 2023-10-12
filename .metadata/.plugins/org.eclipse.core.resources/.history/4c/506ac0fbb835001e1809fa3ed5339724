@@ -1,0 +1,8 @@
+
+public class BasicInfo1 {
+public static void main(String[]args) {
+	StudentDetails studentDetails = new StudentDetails(); 
+	System.out.println("StudentID:"+studentDetails.getStuData().getUserId());
+}
+
+}

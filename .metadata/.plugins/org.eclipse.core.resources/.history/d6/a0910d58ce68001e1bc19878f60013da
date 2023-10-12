@@ -1,0 +1,45 @@
+package Jdbc;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class InsertQuery {
+	public static void main(String[] args) {
+		Connection connection=null;
+		PreparedStatement statement=null;
+		ResultSet resultset=null;
+		String dburl="jdbc:mysql://192.168.0.125:3306/vignesh";
+		String username="root";
+		String password="rootroot";
+		String insertquery="select*from student(StudentID,FirstName,Email) values (?,?)";
+		try {
+			connection=DriverManager.getConnection(dburl,username,password);
+			statement=connection.prepareStatement(insertquery);
+			resultset=statement.executeQuery(insertquery);
+			
+			while(resultset.next()) {
+				InsertQuery JDBCinput=new InsertQuery();
+				System.out.println(resultset.getInt("StudentID"));
+				System.out.println(resultset.getString("FirstName"));
+				System.out.println(resultset.getString("Email"));
+				System.out.println(resultset.getLong("Mobile"));
+				
+				JDBCinput.setStudentID(resultset.getInt("StudentID"));
+				JDBCinput.setFirstName(resultset.getString("FirstName"));
+				JDBCinput.setEmail(resultset.getString("Email"));
+				JDBCinput.setMobile(resultset.getLong("Mobile"));
+				
+				statement.setInt(0, 30);
+				statement.setString(1, "Azzez");
+				statement.setString(2, "azzez@gmail.com");
+				
+			}
+		}catch(Exception e){
+			
+		}
+	}
+
+}
+

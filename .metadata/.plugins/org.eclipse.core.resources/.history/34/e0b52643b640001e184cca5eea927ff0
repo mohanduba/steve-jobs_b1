@@ -1,0 +1,9 @@
+import java.util.Date;
+public class Clock {
+	void date() {
+ Date dob=new Date();
+System.out.println(dob);
+	}
+}
+
+

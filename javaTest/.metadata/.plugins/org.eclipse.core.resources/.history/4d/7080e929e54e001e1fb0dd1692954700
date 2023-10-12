@@ -1,0 +1,20 @@
+package javatest;
+
+import java.util.Scanner;
+
+public class StepToExecute {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("step1:Start with class keyword and class name:");
+		System.out.println("step2:Save the file with class name");
+		System.out.println("step3:Give the main method where the action will be performed");
+		System.out.println("step4:After the completion of program,go to command prompt to execute");
+		System.out.println("step5:First,enter the (javac filename.java) to compile");
+		System.out.println("step6:After compilation,class file will be created");
+		System.out.println("step7:Next, we have to write (java filename) to execute");
+		System.out.println("step8:Program will be Executed");
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Calculator {
+	int num1,num2;
+	char op;
+	void calciMethod(int num1,char op,int num2) {
+		System.out.println("Enter FirstNumber :"+num1);
+		Scanner sc = new Scanner(System.in);
+		num1 = sc.nextInt();
+		System.out.println("Enter SecondNumber :"+num2);
+		Scanner sc1 = new Scanner(System.in);
+		num2 = sc.nextInt();
+		
+		if(op == '+') {
+			System.out.println("Addition :"+(num1+num2));
+		}
+		else if(op == '-') {
+			System.out.println("Subtraction :"+(num1-num2));
+		}
+		else if(op == '*') {
+			System.out.println("Multiplication :"+(num1*num2));
+		}
+		else if(op == '/') {
+			System.out.println("Subtraction :"+(num1/num2));
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class BasicInfo1 {
+public static void main(String[]args) {
+		StudentDetails basic = new StudentDetails();
+		basic.getStuData();
+		
+		}
+
+}

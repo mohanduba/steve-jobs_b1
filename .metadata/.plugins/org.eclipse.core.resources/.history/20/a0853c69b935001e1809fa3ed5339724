@@ -1,0 +1,12 @@
+
+public class BasicInfo1 {
+public static void main(String[]args) {
+	StudentDetails studentDetails = new StudentDetails(); 
+	System.out.println("StudentID:"+studentDetails.getStuData().getUserId());
+	System.out.println("StudentID:"+studentDetails.getStuData().getCourseName());
+	System.out.println("StudentID:"+studentDetails.getStuData().getCourseDuration());
+	System.out.println("StudentID:"+studentDetails.getStuData().getCourseSubBranch());
+	System.out.println("StudentID:"+studentDetails.getStuData().getDateOfJoin());
+}
+
+}

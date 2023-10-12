@@ -1,0 +1,14 @@
+
+public class Calculator {
+	int num1,num2;
+	char op;
+	void calciMethod(int num1,int num2) {
+		if(op == '+') {
+			System.out.println("Addition :"+(num1+num2));
+		}
+		else if(op == '-') {
+			yso
+		}
+	}
+
+}

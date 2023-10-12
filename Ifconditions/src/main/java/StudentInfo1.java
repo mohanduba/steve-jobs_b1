@@ -1,0 +1,57 @@
+import java.util.Date;
+public class StudentInfo1 {
+	private String userId;
+	private String courseName;
+	private String courseDuration;
+	private String DateOfJoin;
+	private String courseSubBranch;
+	private AddressInfo1 addressinfo1;
+	private RegBasicInfo1 regBasicInfo1;
+
+	
+	public RegBasicInfo1 getRegBasicInfo1() {
+		return regBasicInfo1;
+	}
+	public void setRegBasicInfo1(RegBasicInfo1 regBasicInfo1) {
+		this.regBasicInfo1 = regBasicInfo1;
+	}
+	public AddressInfo1 getAddressinfo1() {
+		return addressinfo1;
+	}
+	public void setAddressinfo1(AddressInfo1 addressinfo1) {
+		this.addressinfo1 = addressinfo1;
+	}
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	public String getCourseDuration() {
+		return courseDuration;
+	}
+	public void setCourseDuration(String courseDuration) {
+		this.courseDuration = courseDuration;
+	}
+	public String getDateOfJoin() {
+		return DateOfJoin;
+	}
+	public void setDateOfJoin(String dateOfJoin) {
+		DateOfJoin = dateOfJoin;
+	}
+	public String getCourseSubBranch() {
+		return courseSubBranch;
+	}
+	public void setCourseSubBranch(String courseSubBranch) {
+		this.courseSubBranch = courseSubBranch;
+	}
+
+
+}

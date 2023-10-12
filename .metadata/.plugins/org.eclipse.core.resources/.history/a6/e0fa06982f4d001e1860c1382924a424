@@ -1,0 +1,20 @@
+
+public class Calculator {
+	int num1,num2;
+	char op;
+	void calciMethod(int num1,char op,int num2) {
+		if(op == '+') {
+			System.out.println("Addition :"+(num1+num2));
+		}
+		else if(op == '-') {
+			System.out.println("Subtraction :"+(num1-num2));
+		}
+		else if(op == '*') {
+			System.out.println("Multiplication :"+(num1*num2));
+		}
+		else if(op == '/') {
+			System.out.println("Subtraction :"+(num1/num2));
+		}
+	}
+
+}

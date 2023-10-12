@@ -1,0 +1,71 @@
+package Jdbc;
+
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.*;
+
+public class JdbcPractice {
+
+	public static void main(String[] args)throws SQLException {
+		// TODO Auto-generated method stub
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet resultSet = null;
+		
+		String dbURL = "jdbc:mysql://192.168.0.138:3306/StudentDetails";
+		String userName = "root";
+		String password = "Mohan@858";
+		String query = "select * from studentInfo";
+		
+	
+		
+		try {
+			//Class.forName("com.mysql.cj.jdbc.Driver");
+			connection=DriverManager.getConnection(dbURL, userName, password);
+			statement=connection.createStatement();
+			resultSet=statement.executeQuery(query);
+			while(resultSet.next()) {
+//				System.out.println(resultSet.getString("streetAndArea"));
+//				System.out.println(resultSet.getString("userId"));
+//				System.out.println(resultSet.getInt("addressId"));
+//				System.out.println("--------------------");
+				DataList std1 = new DataList();
+				std1.setId(resultSet.getInt("Id"));
+				std1.setStudentId(resultSet.getInt("studentId"));
+				
+				std1.setMobileNumber(resultSet.getLong("mobileNumber"));
+				std1.setEmail(resultSet.getString("Email"));
+				std1.setGender(resultSet.getString("gender"));
+				std1.setDob(resultSet.getString("Dob"));
+				std1.setYearOfJoin(resultSet.getInt("yearOfJoin"));
+				std1.setCourseId(resultSet.getInt("CourseId"));
+				std1.setBloodGroup(resultSet.getString("bloodGroup"));
+				std1.setYearOfCourseCompletion(resultSet.getInt("yearOfCourseCompletion"));
+				
+				List<DataList> li = new ArrayList<DataList>();
+				li.add(std1);
+				for(DataList e:li) {
+					System.out.println("Id:"+e.Id);
+				}
+				
+				
+				
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			resultSet.close();
+			
+			connection.close();
+			statement.close();
+			
+		}
+		
+
+	}
+
+}
